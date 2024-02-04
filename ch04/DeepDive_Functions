@@ -1,0 +1,20 @@
+## This program creates a function that creates an 'adder' function
+## It takes a single argument
+## This adder adds a user inputted argument to the adder's argument
+## The program then tests that the adder function works
+
+def create_adder(arg1):
+    def adder(arg2):
+        return arg1 + arg2
+    return adder
+
+# the correct output is 112 and 89
+
+add_12 = create_adder(12)
+print(add_12(100))
+print(add_12(77))
+
+# The correct output is 60 and 53
+increment_by_twenty = create_adder(20)
+print(increment_by_twenty(40))
+print(increment_by_twenty(33))
