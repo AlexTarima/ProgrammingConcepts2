@@ -1,9 +1,12 @@
 # fig04_02.py
 """Simulating the dice game Craps."""
+## This program will simulate the dice game Craps
+## It will do so 1 million times, in blocks of 1000
+## It will then print the following statistics
+## Win%, Loss%, and RollCount% (Resolved at and Cumulative)
+
+
 import random
-from matplotlib import animation
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 wins_dictionary = dict()
 wins = 0
