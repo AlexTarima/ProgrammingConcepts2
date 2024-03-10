@@ -1,10 +1,10 @@
-# This program will output words beginning/ending on b/ed
+# This program takes a sentence as input from the user
+# This program will output the words beginning/ending on b/ed
 # It will use regular expressions to do so
 
 import re
 
 sentence = input("Enter a sentence: ")
-split_sentence = sentence.split()
 
 #2 - Prints if they begin on b
 
