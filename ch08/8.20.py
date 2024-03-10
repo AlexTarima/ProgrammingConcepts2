@@ -4,7 +4,7 @@
 
 import re
 
-DEBUG = True  # Set to True if you want to execute debug statements
+DEBUG = False  # Set to True if you want to execute debug statements
 MONTHS = ("January","February","March","April","May","June","July","August",
           "September","October","November","December")
 
@@ -12,7 +12,6 @@ MONTHS = ("January","February","March","April","May","June","July","August",
 # Note the use of raw (r"something") string format to eliminate the need for escape characters
 REGEX1 = r"^(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])([0-9][0-9])$"
 def validFmt1(date1):
-    print("validFmt1")
     if (re.fullmatch(REGEX1, date1)):
         result = re.search(REGEX1, date1)
         if DEBUG: mm = result[1]  # Debug
@@ -25,7 +24,6 @@ def validFmt1(date1):
         return None
 # Match mm/dd/yyyy    You need to implement this function
 def validFmt2(date1):
-    print("validFmt2")
     REGEX2 = r"^(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19[0-9][0-9])$"
     if (re.fullmatch(REGEX2, date1)):
         result = re.search(REGEX2, date1)
@@ -38,7 +36,6 @@ def validFmt2(date1):
 
 # Match monthname dd, yyyy
 def validFmt3(date1):
-    print("validFmt3")
     REGEX3 = r"([A-Z][a-z]*)\s([0-3][0-9]),\s19(\d{2})"
     if (re.fullmatch(REGEX3, date1)):
         result = re.search(REGEX3, date1)
